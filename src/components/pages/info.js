@@ -1,8 +1,7 @@
 import { PokemonInfo } from "../post"
- 
 
 const PokemonDetalhe = () => {
-    return(
+    return (
         <PokemonInfo />
     )
 }

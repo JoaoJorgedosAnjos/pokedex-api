@@ -77,7 +77,6 @@ const PokemonList = () => {
               <H1>Loading...</H1>
             </DivHeader>
           </Header> : (
-
             <div>
               <SectionPage style={{ background: theme.background }}>
                 <section>
@@ -125,7 +124,6 @@ const PokemonList = () => {
                       <Button theme={theme} onClick={prev}>＜</Button>
                       <Button theme={theme} onClick={next}>＞</Button>
                     </DivButtonBotton>
-
                   </div>
                   <DivButton>
                     <Gen1Button offSet={offSet} setOffSet={setOffSet} />
@@ -145,7 +143,6 @@ const PokemonList = () => {
     </>
   )
 }
-
 
 const Button = styled.button`
 width:80px;  
@@ -170,7 +167,6 @@ font-weight: 700;
 
 const SectionPage = styled.section`
 width: 100vw;
-
 `
 
 const Header = styled.header`
@@ -178,7 +174,6 @@ padding:10px;
 display:flex;
 justify-content: space-between;
 align-items: center;
-
 `
 const DivHeader = styled.div`
 display:flex;
@@ -210,7 +205,6 @@ margin:20px 0 0 5%;
 `
 
 const Ul = styled.ul`
-
 display:flex;
 flex-direction:column;
 justify-content: center;
@@ -218,10 +212,6 @@ align-items: center;
 gap:10px;
 margin-top:15px;
 border-radius:25px;
-
-
-}
-
 `
 
 const Li = styled.li`
@@ -245,7 +235,6 @@ font-weight: 500;
   color:${props => props.theme.colorHover};
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   transition: 0.4s ease-in-out;
-  
 }`
 
 const PFont = styled.p`
@@ -253,7 +242,6 @@ font-size:24px;
 ${props => props.white && css`
 font-size:20px;
 transform:rotate(180deg);
-}
 `}
 `
 
@@ -264,7 +252,6 @@ ${props => props.second && css`
 with:155px;
 gap:15px;
 margin-right:25px;
-
 `}
 `
 const DivButtonBotton = styled.div`
@@ -272,7 +259,6 @@ display:flex;
 justify-content: space-around;
 align-items:center;
 height:57px;
-
 `
 
 const ImgPoke = styled.img`

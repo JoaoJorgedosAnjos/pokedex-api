@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom"
 import { getPokemonData, searchPokemon } from "../../services/pokedex-list"
 import { Link } from "react-router-dom"
 import { ThemeTogglerInfoButton } from "../theme-toggler-button/theme-toggler-button"
-import styled, { css } from "styled-components"
+import styled from "styled-components"
 import { useContext } from "react"
 import { ThemeContext } from "../../contexts/theme-context"
 import DexLogo from "../img/dexLogo.png"
@@ -30,19 +30,15 @@ const PokemonInfo = () => {
             const listTypes = pokemonTypes.map((type, index) => <DivType key={index} style={{ backgroundColor: typeColors[type.type.name] }}>{type.type.name}</DivType>)
 
             const pokemonId = pokemon.id.toString().padStart(3, "0")
-
             const pokemonMoves = pokemon.moves
             const listMoves = pokemonMoves.map((m, index) => <Li key={index}>{m.move.name}</Li>)
 
             const abilitiesPromises = pokemon.abilities.map((index) => getPokemonData(index.ability.url))
-
             const pokemonAbilities = await Promise.all(abilitiesPromises)
-
             const abilitiesList = pokemonAbilities.map((a, index) => {
                 const abilitiesFilter = a.flavor_text_entries.filter((ability) => {
                     return ability.language.name === "en"
                 })
-
                 return (
                     <DivAbilities key={index}>
                         <h3>{a.name}</h3>
@@ -64,57 +60,56 @@ const PokemonInfo = () => {
 
     return (
         <>
-        {
-            loading ?  
-            <Header style={{ background: theme.bcHeader }}>
-            <DivHeader>
-              <img src={DexLogo} />
-              <H1>Loading...</H1>
-            </DivHeader>
-          </Header> 
-            
-            :
-                <Section style = {{ backgroundColor: theme.infoBackground }
-        } >
-            <Header style={{ background: theme.bcHeader }}>
-                <Link to="/">
-                    <DivHeader>
-                        <img src={DexLogo} />
-                        <H1>Back to PokéList</H1>
-                    </DivHeader>
-                </Link>
-                <ThemeTogglerInfoButton />
-            </Header>
-            <DivName >
-                <H2 theme={theme}> {pokemon.name} </H2>
-                <H2 theme={theme}>No. {pokeNumId}</H2>
-            </DivName>
-            <SectionCard>
-                <Img src={pokemonImg} />
-                <SectionInfo>
-                    <Div1 theme={theme}>
-                        <h3>Type</h3>
-                        <TypesDiv >
-                            {types}
-                        </TypesDiv>
-                    </Div1>
-                    <DivTittleAbility theme={theme}>
-                        <h3>Abilities</h3>
-                        <Div2>
-                            {abilities}
-                        </Div2>
-                    </DivTittleAbility>
-                    <Div1 theme={theme}>
-                        <H3 >Moves</H3>
-                        <Ul >
-                            {moves}
-                        </Ul>
-                    </Div1>
-                </SectionInfo>
-            </SectionCard>
-        </Section >
-    }
-    </>
+            {
+                loading ?
+                    <Header style={{ background: theme.bcHeader }}>
+                        <DivHeader>
+                            <img src={DexLogo} />
+                            <H1>Loading...</H1>
+                        </DivHeader>
+                    </Header>
+                    :
+                    <Section style={{ backgroundColor: theme.infoBackground }
+                    } >
+                        <Header style={{ background: theme.bcHeader }}>
+                            <Link to="/">
+                                <DivHeader>
+                                    <img src={DexLogo} />
+                                    <H1>Back to PokéList</H1>
+                                </DivHeader>
+                            </Link>
+                            <ThemeTogglerInfoButton />
+                        </Header>
+                        <DivName >
+                            <H2 theme={theme}> {pokemon.name} </H2>
+                            <H2 theme={theme}>No. {pokeNumId}</H2>
+                        </DivName>
+                        <SectionCard>
+                            <Img src={pokemonImg} />
+                            <SectionInfo>
+                                <Div1 theme={theme}>
+                                    <h3>Type</h3>
+                                    <TypesDiv >
+                                        {types}
+                                    </TypesDiv>
+                                </Div1>
+                                <DivTittleAbility theme={theme}>
+                                    <h3>Abilities</h3>
+                                    <Div2>
+                                        {abilities}
+                                    </Div2>
+                                </DivTittleAbility>
+                                <Div1 theme={theme}>
+                                    <H3 >Moves</H3>
+                                    <Ul >
+                                        {moves}
+                                    </Ul>
+                                </Div1>
+                            </SectionInfo>
+                        </SectionCard>
+                    </Section >
+            }
+        </>
     )
 }
 
@@ -134,7 +129,6 @@ min-height:100vh;
 @media (max-width: 630px) {
     min-height:100%;
   }
-
 `
 const Header = styled.header`
 display:flex;

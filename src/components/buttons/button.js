@@ -11,8 +11,6 @@ export const Button = (props) => {
   )
 }
 
-
-
 const ButtonStyle = styled.button`
 border:none;
 width:75px;

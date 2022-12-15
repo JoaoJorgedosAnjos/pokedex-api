@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { getPokemonData  } from "../../services/pokedex-list";
+import { getPokemonData } from "../../services/pokedex-list";
 import { ThemeContext } from "../../contexts/theme-context";
 import { useContext } from "react";
 
@@ -16,17 +16,14 @@ const FilterType = ({ types, setPokedex, offSet }) => {
         const pokemonsDataOfTypePromises = pokemonsListOfTypeSelected.map((pokemon) => getPokemonData(pokemon.url));
         const pokemonsDataOfType = await Promise.all(pokemonsDataOfTypePromises);
 
-     
         if (typeSelected) {
             setPokedex(pokemonsDataOfType)
         }
+    }
+    const { theme } = useContext(ThemeContext)
 
-        
-    } 
-    const { theme  } = useContext(ThemeContext)
-    
     return (
-        <Div>            
+        <Div>
             <Label > FIlter types: </Label>
             <select onChange={handleChange}>
                 <option ></option>
@@ -35,11 +32,10 @@ const FilterType = ({ types, setPokedex, offSet }) => {
                         <option value={type.name} key={index}>{type.name}</option>
                     )
                 })}
-            
+
             </select>
 
-            <Button theme={theme} onClick={()=>window.location.reload(false)}><H2>All</H2></Button>
-            
+            <Button theme={theme} onClick={() => window.location.reload(false)}><H2>All</H2></Button>
         </Div>
     )
 }
@@ -47,7 +43,7 @@ const Label = styled.label`
 font-size:18px;
 font-weight: 500;
 `
-const H2 =  styled.h2`
+const H2 = styled.h2`
 font-size:15px;
 font-weight: 600;
 `
@@ -63,7 +59,7 @@ border-radius:50%;
 border:1px white solid;
 background:${props => props.theme.background};
 cursor:pointer;
-color:${props =>props.theme.color};
+color:${props => props.theme.color};
 &:hover{
     background:${props => props.theme.pokeballColor};
     color:white;

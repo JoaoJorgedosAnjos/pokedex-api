@@ -1,13 +1,10 @@
-import React, { useContext, useEffect, useState } from "react"
-import styled   from "styled-components"
+import React, { useContext } from "react"
+import styled from "styled-components"
 import { ThemeContext, themes } from "../../contexts/theme-context"
 import { Button } from "../buttons/button"
 
-
 export const ThemeTogglerButton = () => {
-
     const { theme, setTheme } = useContext(ThemeContext)
-
     return (
         <Div>
             <Button onClick={() => {
@@ -17,12 +14,8 @@ export const ThemeTogglerButton = () => {
     )
 }
 
-
-
-export const ThemeTogglerInfoButton = () => {  
-
+export const ThemeTogglerInfoButton = () => {
     const { theme, setTheme } = useContext(ThemeContext)
-
     return (
         <DivInfo>
             <Button onClick={() => {
