@@ -34,9 +34,14 @@ export const ThemeContext = createContext({})
 
 export const ThemeProvider = (props) => {
 
-    const getTheme=()=>{
-        return JSON.parse(localStorage.getItem("theme")) || false
-    }
+     const getTheme=()=>{
+        const storageValue = localStorage.getItem("theme")       
+        if(!storageValue){
+            return themes.light
+        }else{
+            return JSON.parse(localStorage.getItem("theme"))
+        }
+     }
 
     const [theme, setTheme] = useState(getTheme())
     

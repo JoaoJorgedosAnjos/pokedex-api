@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# Pokédex Poké Api
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Indice
+#### 1. Descrição da aplicação
+#### 2.  Descrição das funcionalidades 
+#### 3. Ferramentas utilizadas
+#### 4.  Justificativa do design do projeto
+#### 5.  Como baixar/clonar e rodar o projeto
 
-## Available Scripts
+## 1.	Descrição da aplicação: 
+A aplicação tem a finalidade de exibir uma lista de 10 Pokémon por página, com sua imagem, número e nome, com um total de 1124 Pokémon. 
+<img src="./public/assets/image-gifs/gif-1.gif"/>
 
-In the project directory, you can run:
+Ao clicar em algum Pokémon da lista, o usuário será redirecionado para uma página com a arte oficial do Pokémon, e outras informações como o tipo, habilidades e movimentos.
+<img src="./public/assets/image-gifs/gif-2.gif"/>
 
-### `npm start`
+A aplicação é responsiva, e funciona bem em todos os tamanhos de tela.
+<img src="./public/assets/image-gifs/gif-3.gif"/>
+## 2.	Descrição das funcionalidades
+A aplicação possui um filtro de tipos que lista e exibe apenas Pokémon com aquele tipo em especifico. 
+<img src="./public/assets/image-gifs/gif-4.gif"/>
+Possui botões que servem para passar e voltar a lista, nesse caso sempre exibindo 10 Pokémon. Possui botões que levam o usuário para o começo da lista de cada geração lançada nos Pokémon (exemplo: 1 º geração; do Pokémon 1 ao 151, 2º geração; do Pokémon 152 ao 251 e etc.). E um botão que seleciona um tema claro ou escuro, que fica salvo no localStorage, quando o usuário abrir a aplicação o último tema definido vai ser inicializado junto com a aplicação.
+<img src="./public/assets/image-gifs/gif-5.gif"/>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 3.	Ferramentas utilizadas
+Javascript juntamente com o React. O React foi utilizado porque era preciso criar uma aplicação de página únic, SPA (single page application). O Fetch foi utilizado para fazer as requisições da REST Api (Poké Api).Context Api foi utilizado para definir as cores dos temas e também para conseguir acessar todo esse conteúdo em qualquer lugar da minha aplicação. Styled component foi utilizado para estilizar grande parte dos componentes da aplicação.
+## 4.	Justificativa do design do projeto
+A aplicação foi pensada para mostrar uma lista relativamente curta para que caiba em qualquer dispositivo de celular, tablet ou desktop. Mostrando apenas uma lista com 10 Pokémon por vez o usuário não precisa rolar a página inteira de volta para conseguir usar o filtro de tipos, ou mudar o tema. Outro motivo foi tentar aproximar a aplicação de uma Pokédex baseada nos jogos, animes e manga, como se fosse um dispositivo parecido com um celular ou tablet. 
+## 5.	Como baixar/clonar e rodar o projeto
+1.	Clonar ou baixar o código do repositório
+2.	Abrir o projeto dentro do Visual Studio Code (Vs Code)
+3.	Instalar os pacotes utilizados no projeto no terminal com “npm install”
+4.	Inicializar o projeto com o “npm start” no terminal
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

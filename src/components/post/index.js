@@ -80,7 +80,7 @@ const PokemonInfo = () => {
                 <Link to="/">
                     <DivHeader>
                         <img src={DexLogo} />
-                        <H1>Back to PokeList</H1>
+                        <H1>Back to PokéList</H1>
                     </DivHeader>
                 </Link>
                 <ThemeTogglerInfoButton />
