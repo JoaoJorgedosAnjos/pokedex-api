@@ -1,9 +1,9 @@
 import { PokemonInfo } from "../post"
 
-const PokemonDetalhe = () => {
+const PokemonDetails = () => {
     return (
         <PokemonInfo />
     )
 }
 
-export { PokemonDetalhe }
+export { PokemonDetails }

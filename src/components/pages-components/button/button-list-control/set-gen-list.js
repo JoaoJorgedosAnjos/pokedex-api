@@ -1,10 +1,9 @@
 import styled from "styled-components"
-import { ThemeContext } from "../../contexts/theme-context"
+import { ThemeContext } from "../../../../contexts/theme-context"
 import { useContext } from "react"
 
-
 export const Gen1Button = ({ offSet, setOffSet }) => {
-  const { theme, setTheme } = useContext(ThemeContext)
+  const { theme } = useContext(ThemeContext)
   const handleClick = () => setOffSet(offSet === 0 ? offSet = 0 : offSet = 0)
 
   return (

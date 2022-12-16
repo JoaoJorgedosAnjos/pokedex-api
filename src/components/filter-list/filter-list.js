@@ -3,7 +3,7 @@ import { getPokemonData } from "../../services/pokedex-list";
 import { ThemeContext } from "../../contexts/theme-context";
 import { useContext } from "react";
 
-const FilterType = ({ types, setPokedex, offSet }) => {
+const FilterType = ({ types, setPokedex }) => {
 
     async function handleChange(event) {
 

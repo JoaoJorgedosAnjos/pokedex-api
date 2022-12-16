@@ -22,8 +22,5 @@ export async function filterPokemonByType (){
   return  types
 }
 
-export async function getPokemonType(url){
-  const response = await fetch(url)
-  return await response
-}
+
 
