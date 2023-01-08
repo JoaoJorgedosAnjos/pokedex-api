@@ -1,4 +1,4 @@
-import { PokemonInfo } from "../post"
+import { PokemonInfo } from "../components/pokemon-Info"
 
 const PokemonDetails = () => {
     return (

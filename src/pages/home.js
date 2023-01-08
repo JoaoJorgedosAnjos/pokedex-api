@@ -1,4 +1,4 @@
-import { PokemonList } from "../pokedex-list/pokedex-list"
+import { PokemonList } from "../components/pokedex-list/pokedex-list"
 
 const Home = () => {
     return (

@@ -26,7 +26,7 @@ const FilterType = ({ types, setPokedex }) => {
         <Div>
             <Label > FIlter types: </Label>
             <select onChange={handleChange}>
-                <option ></option>
+                <option value="0">All</option>
                 {types.map((type, index) => {
                     return (
                         <option value={type.name} key={index}>{type.name}</option>

@@ -82,6 +82,7 @@ display:flex;
 align-items: center;
 ${props => props.second && css`
 with:155px;
+
 gap:15px;
 margin-right:25px;
 `}

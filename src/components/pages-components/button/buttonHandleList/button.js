@@ -20,6 +20,7 @@ display:flex;
 justify-content: space-around;
 align-items:center;
 height:57px;
+
 `
 
 const Button = styled.button`
